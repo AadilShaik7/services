@@ -12,7 +12,7 @@ public class LoanController {
 
     private LoanService loanService;
 
-    @PutMapping("/save")
+    @PostMapping(value = "/save", consumes = "application/json")
     public void save(@RequestBody LoanDto loan) {
        loanService.save(loan);
     }

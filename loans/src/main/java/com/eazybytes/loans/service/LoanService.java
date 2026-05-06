@@ -7,6 +7,7 @@ import com.eazybytes.loans.repository.LoansRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+
 @Service
 @AllArgsConstructor
 public class LoanService {
@@ -17,4 +18,5 @@ public class LoanService {
         Loans loans = LoanDtoMapper.mapLoanDtoToLoans(loan);
         loansRepo.save(loans);
     }
+
 }

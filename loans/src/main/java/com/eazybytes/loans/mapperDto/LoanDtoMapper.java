@@ -3,6 +3,8 @@ package com.eazybytes.loans.mapperDto;
 import com.eazybytes.loans.dto.LoanDto;
 import com.eazybytes.loans.entity.Loans;
 
+import java.time.LocalDate;
+
 public class LoanDtoMapper {
 
     public static Loans mapLoanDtoToLoans(LoanDto loanDto) {
@@ -11,7 +13,7 @@ public class LoanDtoMapper {
         loans.setLoanType(loanDto.getLoanType());
         loans.setTotalLoan(loanDto.getTotalLoan());
         loans.setMobileNumber(loanDto.getMobileNumber());
-        loans.setAmountPaid(0);
+        loans.setAmountPaid(loanDto.getAmountPaid());
         loans.setOutstandingAmount(loanDto.getTotalLoan());
         return  loans;
     }
